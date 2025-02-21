@@ -8,7 +8,7 @@ export class Users{
     }
 
     public loadUserFromFile(filePath:string){
-        if(!fs.existsSync('users/Logueos.csv'))
+        if(!fs.existsSync(filePath))
             throw new Error(`File does not exist: ${filePath}`);
 
         const users = fs.readFileSync(filePath,'utf-8').split('\n');
